@@ -4,38 +4,35 @@
 
 body {
     width: 100vw;
-    height: 100vh;
-
     margin: 0;
     padding: 0;
-
-    overflow: hidden;
 }
 
 main {
     display: grid;
     grid-template-columns: repeat(5, 20vw);
-    grid-template-rows: repeat(4, 25vh);
-}
-
-main div {
-    /* align-content: center; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-rows: 24vh 24vh 24vh 28vh;
 }
 
 #chart {
     grid-area: 1 / 1 / span 3 / span 4;
     position: relative;
+    padding: 5vh 0 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #stocks {
     grid-area: 1 / 5 / span 4 / span 1;
+    padding: 2vh;
 }
 
 #summary {
     grid-area: 4 / 1 / span 1 / span 4;
+    padding: 3vh 5vw;
+    text-align: justify;
+    font-size: 0.81em;
 }
 
 #canvas {
@@ -45,21 +42,52 @@ main div {
 
 #chart-durns {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    gap: 2vh;
+    background-color: rgb(205, 205, 236);
+    padding: 1vh;
     position: absolute;
-    top: 3vh;
-    right: 3vw;
+    top: 18vh;
+    left: 3vw;
 }
 
 .drn-label {
     padding: 1vh 1vw;
-    margin: 1vw;
+    margin: 1vh;
     background-color: rgb(7, 7, 51);
     color:azure;
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.drn-label:hover {
+    background-color: rgb(11, 11, 61);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1vh;
+}
+
+li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    margin: 5px;
+    background-color: rgb(205, 205, 236);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: rgb(180, 180, 238);
+}
+
+i {
+    vertical-align: middle;
 }
